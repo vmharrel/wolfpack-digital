@@ -1,0 +1,99 @@
+/* 2.8 Alert Notification */
+.notif-box {
+	position: fixed;
+	top: 0;
+	z-index: 99999;
+	padding: 22px;
+	width: 100%;
+	font-size: 90%;
+	line-height: 1.4;
+	-webkit-transition: all 0.27s ease-in-out;
+	transition: all 0.27s ease-in-out;
+	-webkit-transform: translateY(-200%);
+	-ms-transform: translateY(-200%);
+	transform: translateY(-200%);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.notif-box.show-up {
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.notif-box p {
+	display: inline-block;
+	margin-bottom: 0;
+	padding: 0 3.2em;
+	font-size: 1.2em;
+}
+
+.notif-box span.notif-icon{
+	position: absolute;
+	top: 50%;
+	left: .6em;
+	display: block;
+	font-size: 28px;
+	opacity: 0;
+	-webkit-transition: all .8s;
+	transition: all .8s;
+	-webkit-transform: translate3d(0,-50%,0);
+	-ms-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+
+.notif-box.show-up span.notif-icon {
+	opacity: 1;
+}
+
+.notif-box a.notification-close {
+	position: absolute;
+	top: 15%;
+	right: 1em;
+	visibility: visible;
+	overflow: hidden;
+	width: 48px;
+	height: 48px;
+	background: url(../images/cd-icon-close.svg) no-repeat center center;
+	text-indent: 100%;
+	white-space: nowrap;
+	opacity: 1;
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.4s;
+	-moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.4s;
+	transition: transform 0.3s 0s, visibility 0s 0.4s;
+}
+
+.notif-box a.notification-close:hover {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+#error-notification,
+#subscribe-error-notification,
+#hero-error-notification {
+	background: #cc3530;
+	color: rgba(250, 251, 255, 0.95);
+}
+
+#error-notification.notif-box,
+#subscribe-error-notification.notif-box,
+#hero-error-notification.notif-box {
+	box-shadow: inset 4.5em 0 #b80d07;
+}
+
+#success-notification,
+#subscribe-success-notification,
+#hero-success-notification {
+	background: #19a9e5;
+	color: rgba(250, 251, 255, 0.95);
+}
+
+#success-notification.notif-box
+#subscribe-success-notification.notif-box,
+#hero-success-notification.notif-box {
+	box-shadow: inset 4.5em 0 #13a0db;
+}
+/* -- */
